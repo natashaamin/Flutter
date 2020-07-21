@@ -3,14 +3,14 @@ import 'location_fact.dart';
 class Location {
   final int id;
   final String name;
-  final String imagePAth;
+  final String imagePath;
   final List<LocationFact> facts;
 
-  Location(this.id, this.name,this.imagePAth,this.facts);
+  Location(this.id, this.name,this.imagePath,this.facts);
 
   static List<Location> fetchAll() {
     return [
-      Location(1,'Sibu', 'assets/images/kiyomizu-dera.jpg',[
+      Location(1,'Siiiiiibu', 'assets/images/kiyomizu-dera.jpg',[
         LocationFact('Smmary', 'While we are on my way home'),
         LocationFact('How to go there','By car')
       ]),

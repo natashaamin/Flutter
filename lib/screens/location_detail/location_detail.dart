@@ -21,13 +21,15 @@ class LocationDetail extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            ImageBanner(locations.imagePAth),
+            ImageBanner(locations.imagePath),
           ]..addAll(textSection(locations)))),
     );
   }
 
   List<Widget> textSection(Location location) {
-    return location.facts.map((fact) => TextSection(fact.title, fact.text)).toList();
+    final location = Location.fetchByID(_locationID);
+
+    return location.facts.map((fact) => TextSection(fact.title + " " + location.name, fact.text)).toList();
   }
 
 }
